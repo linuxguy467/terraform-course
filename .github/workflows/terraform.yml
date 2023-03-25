@@ -81,7 +81,7 @@ jobs:
 
       - name: Terratest Execution
         if: github.event_name == 'pull_request'
-        working-directory: 08-testing/tests/terratest
+        working-directory: 08-testing-terraform-code/tests/terratest
         run: |
           go test . -v timeout 10m
 
