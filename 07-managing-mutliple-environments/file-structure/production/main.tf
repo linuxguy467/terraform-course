@@ -2,7 +2,7 @@ terraform {
   # Assumes s3 bucket and DynamoDB Table are set up
   backend "s3" {
     bucket         = "matthem-tf-state"
-    key            = "web-app/terraform/terraform.tfstate"
+    key            = "07-managing-multiple-environments/production/terraform.tfstate"
     region         = "us-east-1"
     dynamodb_table = "terraform-state-locking"
     encrypt        = true
