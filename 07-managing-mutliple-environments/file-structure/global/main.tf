@@ -21,5 +21,5 @@ provider "aws" {
 }
 
 resource "aws_route53_zone" "primary" {
-  name = "matthemcodesdeployed.com"
+  name = "matthemdeployed.com"
 }
