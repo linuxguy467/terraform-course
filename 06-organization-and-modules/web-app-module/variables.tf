@@ -49,6 +49,11 @@ variable "domain" {
 }
 
 #RDS
+variable "db_identifier" {
+  description = "Identifier of DB"
+  type        = string
+}
+
 variable "db_name" {
   description = "Name of DB"
   type        = string

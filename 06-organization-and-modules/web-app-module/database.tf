@@ -1,4 +1,5 @@
 resource "aws_db_instance" "db_instance" {
+  identifier          = var.db_identifier
   allocated_storage   = 20
   storage_type        = "standard"
   engine              = "postgres"

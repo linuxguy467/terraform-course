@@ -39,6 +39,7 @@ module "web_app" {
   environment_name = local.environment_name
   instance_type    = "t2.small"
   create_dns_zone  = false
+  db_identifier    = "web-app-${local.environment_name}-db"
   db_name          = "${local.environment_name}db"
   db_user          = "foo"
   db_pass          = var.db_pass
