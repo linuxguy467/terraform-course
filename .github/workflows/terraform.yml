@@ -2,9 +2,9 @@ name: 'Terraform'
 
 on:
   # Uncomment to enable staging deploy from main
-  push:
-    branches:
-      - main
+  # push:
+  #   branches:
+  #     - main
   release:
     types: [published]
   pull_request:
@@ -81,7 +81,7 @@ jobs:
 
       - name: Terratest Execution
         if: github.event_name == 'pull_request'
-        working-directory: 08-testing-terraform-code/tests/terratest
+        working-directory: 08-testing/tests/terratest
         run: |
           go test . -v timeout 10m
 
@@ -110,3 +110,6 @@ jobs:
         run: |
           terraform init
           terraform apply -var db_pass=${{secrets.DB_PASS }} -auto-approve
+permissions:
+  issues: 'write'
+  pull-requests: 'write'
